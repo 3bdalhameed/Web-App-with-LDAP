@@ -59,7 +59,7 @@ namespace ldap.Controllers
         private bool ValidateCredentials(string username, string password)
         {
             // Assuming "LDAP://YourDomain" is the path to your LDAP directory
-            using (var context = new PrincipalContext(ContextType.Domain, "WIN-SM252M527F1:389", "CN=jehad ahmad,CN=Users,DC=WIN,DC=jehad"))
+            using (var context = new PrincipalContext(ContextType.Domain, "<PC-NAME:LDAP-Port>", "CN=jehad ahmad,CN=Users,DC=WIN,DC=jehad"))
             {
                 // Perform actions, such as validating credentials
                 return context.ValidateCredentials(username, password);
